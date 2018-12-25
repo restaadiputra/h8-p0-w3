@@ -4,7 +4,6 @@ function targetTerdekat(arr) {
   var posO = -1;
   var curr = '';
 
-
   for(var i = 0; i < arr.length; i++) {
     // set current position to either 'x' or 'o'
     // if the loop reach one of them

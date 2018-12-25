@@ -16,12 +16,15 @@ function targetTerdekat(arr) {
       curr = 'o';
     }
 
-    // if the position both 'x' and 'o' already fill
-    // calculate the distance 
-    // set either one of them to -1 for whichever found first, this will reset their position
+    // if the position both 'x' and 'o' already fill calculate the distance 
     if(posX !== -1 && posO !== -1) {
-      dist = Math.abs(posX - posO);
-      if(curr = 'x') {
+      // if dist === 0 or higher than current distance, set distance to current distance
+      var currDist = Math.abs(posX - posO);
+      if(dist === 0 || dist > currDist) {
+        dist = currDist;
+      } 
+      // set either one of them to -1 for whichever found first, this will reset their position
+      if(curr === 'x') {
         posO = -1;
       } else {
         posX = -1;
@@ -37,3 +40,4 @@ console.log(targetTerdekat(['o', ' ', ' ', ' ', 'x', 'x', 'x'])); // 4
 console.log(targetTerdekat(['x', ' ', ' ', ' ', 'x', 'x', 'o', ' '])); // 1
 console.log(targetTerdekat([' ', ' ', 'o', ' '])); // 0
 console.log(targetTerdekat([' ', 'o', ' ', 'x', 'x', ' ', ' ', 'x'])); // 2
+console.log(targetTerdekat([' ', 'o', ' ', 'x', 'x', 'o', ' ', 'x'])); // 2

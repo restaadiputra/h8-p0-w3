@@ -4,8 +4,8 @@ function angkaPalindrome(num) {
   while(!found) {
     num++;
     found = true;
+    
     var strNum = num.toString()
-  
     for(var i = 0; i < (strNum.length) / 2; i++) {
       if(strNum[i] !== strNum[strNum.length - 1 - i]) {
         found = false;

@@ -2,7 +2,7 @@ function pasanganTerbesar(num) {
   var biggestNum = 0;
   num = num.toString();
 
-  for(var i = 0; i < num.length - 1; i++) {
+  for(var i = 0; i < num.length; i++) {
     if (biggestNum < parseInt(num.substr(i, 2))) {
      biggestNum = parseInt(num.substr(i, 2))
     }

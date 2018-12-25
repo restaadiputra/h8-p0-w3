@@ -17,4 +17,4 @@ function balikString2(word) {
   return balikString2(word.substr(1)) + word[0];
 }
 
-console.log(balikString2('hello world!'));
+console.log(balikString('hello world!'));

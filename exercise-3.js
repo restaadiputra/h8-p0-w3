@@ -19,6 +19,8 @@ function dataHandling(input) {
 console.log(dataHandling(input));
 
 
+// Another Answer
+
 function dataHandling2(input) {
   var data = ''
   for (var i = 0; i < input.length; i++) {

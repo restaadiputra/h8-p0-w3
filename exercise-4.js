@@ -7,7 +7,7 @@ function dataHandling2(input) {
   input.splice(4, 1, "Pria", "SMA Internasional Metro");
   console.log(input);
 
-  // split()
+  // split() function
   var date = input[3].split('/');
   
   switch (date[1]) {

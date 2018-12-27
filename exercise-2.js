@@ -10,7 +10,7 @@ console.log(balikString('hello world!'));
 
 // or we can use recursive
 
-function balikString2(word) {
+function alt_balikString(word) {
   if (word.length === 1){
     return word;
   }

@@ -2,17 +2,14 @@ function targetTerdekat(arr) {
   var dist = 0;
   var posX = -1;
   var posO = -1;
-  var curr = '';
 
   for(var i = 0; i < arr.length; i++) {
     // set current position to either 'x' or 'o'
     // if the loop reach either one of them
     if(arr[i] === 'x') {
       posX = i;
-      curr = 'x';
     } else if(arr[i] === 'o') {
       posO = i;
-      curr = 'o';
     }
 
     // if the position both 'x' and 'o' is filled, calculate the distance 
@@ -22,12 +19,6 @@ function targetTerdekat(arr) {
       if(dist === 0 || dist > currDist) {
         dist = currDist;
       } 
-      // set either one of them to -1 for whichever found first, this will reset their position
-      if(curr === 'x') {
-        posO = -1;
-      } else {
-        posX = -1;
-      }
     }
   }
   return dist;
